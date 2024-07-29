@@ -1,0 +1,99 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+// Base Styles;
+@import 'base/core/layouts/content';
+
+.size-limit, footer > div > div.row.footer1 {
+  max-width: 1440px;
+}
+
+footer {
+  background-color: #235A83;
+  height: fit-content;
+}
+
+@media screen and (min-width: 1440px) {
+  .size-limit, footer > div > div.row.footer1 {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+@import "~@core/scss/base/core/menu/menu-types/vertical-menu.scss";
+
+// Main menu base
+
+.main-menu {
+  .main-menu-content {
+    height: calc(100% - #{$navbar-height} - #{$navbar-footer-height}) !important;
+  }
+
+  .navbar-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    height: 100%;
+    width: $menu-expanded-width;
+    height: $navbar-footer-height;
+    position: relative;
+    transition: 300ms ease all, background 0s;
+  }
+}
+
+// Main Navigation
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  
+  > li {
+    padding: 0 50px !important;
+    
+    > a {
+      justify-content: center;
+      color: #93989B !important;
+      font-size: 18px !important;
+      padding: 5px 15px !important;
+      line-height: 150% !important;
+      margin-bottom: 2rem !important;
+    }
+    &.active {
+      
+      > a {
+        justify-content: center;
+        background: none !important;
+        box-shadow: none !important;
+        color: $primary !important;
+        font-weight: 600 !important;
+        border-radius: 0 !important;
+        border-bottom: 2px solid $primary;
+      }
+    }
+  }
+}
+
+.horizontal-menu {
+  .header-navbar {
+    &.navbar-brand-center {
+      .navbar-header {
+        left: 2rem !important;
+      }
+    }
+  }
+}
+
+// Tooltip
+
+@import '~@core/scss/base/bootstrap-extended/utilities';
+
+.tooltip .tooltip-inner {
+  @extend .font-small-2;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13);
+  color: $body-color;
+  text-align: left;
+}

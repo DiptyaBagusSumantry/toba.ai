@@ -1,0 +1,59 @@
+@import '~@core/scss/base/bootstrap-extended/_include.scss';
+
+#privacy-policy-container {
+  header {
+    background-image: linear-gradient(to right, #73CCD4, #3370A2);
+    height: 176px;
+
+    .card {
+      background: transparent;
+      box-shadow: none;
+
+      .title {
+        color: white;
+        font-size: 36px;
+      }
+    }
+  }
+
+  #privacy-policy-content {
+    padding: 40px 80px;
+    max-width: 1200px;
+
+    h4, p, ul li, .text-black {
+      color: black;
+    }
+  
+    .underline {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    #privacy-policy-content {
+      padding: 40px;
+    }
+  }
+
+  @include media-breakpoint-only(xs) {
+    #privacy-policy-content {
+      padding: 20px !important;
+
+      h4 {
+        font-size: 14px;
+      }
+  
+      p, ul li, .text-black {
+        font-size: 12px;
+      }
+    }
+
+    header {
+      height: 132px !important;
+
+      .title {
+        font-size: 24px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import '~@core/scss/base/bootstrap-extended/_include.scss';
+
+#price-container {
+  header {
+    background-image: linear-gradient(to right, #73CCD4, #3370A2);
+    height: 320px;
+
+    .card {
+      background: transparent;
+      box-shadow: none;
+
+      .title {
+        color: white;
+        font-size: 36px;
+      }
+  
+      .subtitle {
+        color: white;
+      }
+    }
+  }
+
+  #price-section {
+    .card-transaction {
+      &.card-paid {
+        background-color: #F4F9FF;
+      }
+
+      h4, .card-text, small, span {
+        color: black;
+      }
+    
+      .price-text h1, 
+      .price-text p {
+        display: inline; 
+      }
+
+      .detail-pricing-column {
+        padding: 1.2rem;
+        margin-bottom: 1.15rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        &-1-month {
+          padding: 1.2rem;
+          margin-bottom: 1.15rem;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .price-title {
+      font-size: 30px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    header {
+      height: 300px !important;
+    }
+  }
+
+  @include media-breakpoint-only(xs) {
+    header {
+      .price-title {
+        font-size: 24px !important;
+      }
+  
+      .price-subtitle {
+        font-size: 12px !important;
+      }
+    }
+  }
+}

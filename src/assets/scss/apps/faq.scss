@@ -1,0 +1,83 @@
+@import '~@core/scss/base/bootstrap-extended/include';
+
+#faq-container {
+  header {
+    background-image: linear-gradient(to right, #73CCD4, #3370A2);
+    height: 300px;
+
+    .card {
+      background: transparent;
+      box-shadow: none;
+
+      .title {
+        color: white;
+        font-size: 36px;
+      }
+    }
+  }
+
+  #faq-list {
+    padding: 20px 80px 30px;
+
+    #faq-collapse {
+      .card {
+        box-shadow: 0 2px 15px 0 rgb(255 255 255 / 0%) !important;
+      }
+  
+      .card.open {
+        background: #F7FBFF;
+        box-shadow: 0 2px 15px 0 rgb(34 41 47 / 5%) !important;
+      }
+
+      .card-header {
+        padding: 1.5rem 2.8rem 1.5rem 1rem;
+
+        .collapse-title {
+          font-weight: 600;
+        }
+
+        &.collapsed .collapse-title {
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    #faq-list {
+      padding: 10px 40px 20px;
+    }
+
+    header {
+      height: 250px;
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .title {
+      font-size: 24px !important;
+    }
+  }
+
+  @include media-breakpoint-only(xs) {
+    #faq-list {
+      padding: 0px 20px 10px !important;
+    }
+
+    header {
+      height: 200px;
+    }
+  }
+}
+
+.collapse-icon :after {
+  transform: rotate(-180deg);
+}
+
+.collapse-icon [aria-expanded=false]:after {
+  right: 1rem;
+  transform: rotate(0deg);
+}

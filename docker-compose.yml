@@ -1,0 +1,12 @@
+version: "3"
+services:
+  toba-landing:
+    build:      
+      context: .
+    env_file:
+      - .env.local
+    environment:
+      - VUE_APP_BACKEND_URL=http://localhost:9601
+    ports:
+      - "9602:8080"
+    restart: always

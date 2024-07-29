@@ -1,0 +1,64 @@
+@import '~@core/scss/base/bootstrap-extended/include';
+
+#help-container {
+  header {
+    background-image: linear-gradient(to right, #73CCD4, #3370A2);
+    height: 300px;
+
+    .card {
+      background: transparent;
+      box-shadow: none;
+
+      .title {
+        color: white;
+        font-size: 36px;
+      }
+
+      .subtitle {
+        color: white;
+      }
+    }
+  }
+
+  #help-list {
+    padding: 30px 80px 30px;
+
+    .btn .feather {
+      vertical-align: top;
+    }
+  
+    .btn-help {
+      height: 80px;
+      color: $body-color !important;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    header {
+      height: 250px;
+      .title {
+        font-size: 30px;
+      }
+    }
+
+    #help-list {
+      padding: 20px 40px 20px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    header .title {
+      font-size: 24px !important;
+    }
+  }
+
+  @include media-breakpoint-only(xs) {
+    header {
+      height: 200px;
+    }
+
+    #help-list {
+      padding: 10px 20px 0px !important;
+    }
+  }
+}

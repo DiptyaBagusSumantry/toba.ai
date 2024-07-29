@@ -1,0 +1,234 @@
+@import '~@core/scss/base/bootstrap-extended/include';
+@import '~@core/scss/base/bootstrap-extended/utilities';
+
+#dashboard-header {
+  padding: 0px 18px 24px 18px;
+
+  @media (max-width: 650px) {
+    padding: 0px 8px 24px 8px;
+  }
+
+  #search-button {
+    width: 342px;
+    margin-bottom: 24px;
+
+    .input-group-merge {
+      border-radius: 0.357rem;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13);
+
+      .form-control, .input-group-text {
+        background-clip: initial !important;
+        border-color: transparent;
+      }
+    }
+
+    @media (max-width: 818px) {
+      width: 100%;
+    }
+  }
+  .header-account {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  .header-detail {
+    .b-avatar {
+      margin-right: 25px;
+    }
+    .header-statistic {
+      margin-bottom: 8px;
+      margin-right: 24px;
+
+      h3 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      p {
+        color: black;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+    .header-date-range {
+      & > span {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 7px;
+      }
+      .btn-export {
+        height: 40px;
+
+        span {
+          margin-left: 12px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+      .dropdown {
+        font-size: 14px;
+        line-height: 24px;
+        width: 286px;
+
+        @media (max-width: 818px) {
+          width: 100% !important;
+        }
+
+        .btn {
+          background: white !important;
+          box-shadow: 0px 2px 8px rgb(0 0 0 / 13%);
+          border-color: transparent !important;
+          border-radius: 5px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        span {
+          display: none;
+        }
+        .btn-export {
+          padding: 8px;
+        }
+      }
+    }
+    span {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    @media (max-width: 920px) {
+      & > div:first-child {
+        margin-bottom: 28px;
+      }
+      .header-date-range {
+        flex-grow: 1;
+
+        & > div {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+#dashboard-tabs {
+  &.tabs .nav-tabs .nav-link {
+    @extend .font-medium-1;
+
+    &.active {
+      font-weight: $font-weight-bolder;
+      @extend .font-medium-2;
+    }
+
+    &[aria-selected='false'] {
+      font-weight: 400;
+      color: $gray-500;
+    }
+  }
+
+  .tab-icon {
+    & > div {
+      display: none !important;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .tab-icon {
+      & > div {
+        display: flex !important;
+      }
+      span {
+        font-size: 11px;
+      }
+    }
+  
+    .nav-tabs .nav-item {
+      flex: 1 1 auto;
+    }
+  }
+
+  svg.text-muted {
+    color: $gray-250 !important;
+  }
+
+  #dashboard-kompetitor {
+    & > .card {
+      border: 1px solid #E9EAEB;
+      border-radius: 4px;
+    }
+    .component-width {
+      width: 256px;
+    }
+    .absolute-container {
+      position: absolute;
+    }
+    .relative-container {
+      position: relative;
+    }
+    .display-none {
+      display: none;
+    }
+    .section-title {
+      h2 {
+        margin-right: 10px;
+      }
+    }
+    .account {
+      &-list {
+        padding: 24px 40px 22px 40px;
+        margin-bottom: 40px;
+
+        & > div:first-child {
+          margin-bottom: 24px;
+        }
+
+        @media (max-width: 818px) {
+          .kompetitor-accounts {
+            flex-direction: column;
+
+            .kompetitor-add-account {
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+      &-performa {
+        padding: 32px 42px;
+
+        hr {
+          margin-top: 5px;
+          margin-bottom: 16px;
+          border-top: 1px solid #E9EAEB;
+        }
+        .select-account-list {
+          margin-bottom: 40px;
+        }
+        .section {
+          &-performa, &-top-konten {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.dashboard-popover {
+  font-size: 13px !important;
+  line-height: 24px !important;
+
+  .popover-header,
+  .popover-body {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .popover-body {
+    color: #6e6b7b;
+  }
+}

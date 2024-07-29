@@ -1,0 +1,133 @@
+@import '~@core/scss/base/bootstrap-extended/_include.scss';
+
+#help-info-container {
+  padding: 20px 80px;
+
+  .breadcrumb-item a,
+  .breadcrumb-item.active {
+    color: black;
+  }
+  
+  .help-title {
+    font-size: 36px;
+    color: black;
+  }
+  
+  #help-collapse {
+    .card {
+      box-shadow: 0 2px 15px 0 rgb(255 255 255 / 0%) !important;
+
+      &.open {
+        background: #F7FBFF;
+        box-shadow: 0 2px 15px 0 rgb(34 41 47 / 5%) !important;
+      }
+
+      .card-body {
+        padding: 1rem 100px !important;
+      }
+
+      .card-header {
+        height: 80px;
+
+        // &.collapsed {
+        //   height: 83px;
+        // }
+      }
+    }
+
+    .video-container {
+      width: inherit;
+    
+      .video-size {
+        width: 800px;
+        height: 413px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .image-container {
+      margin-bottom: 80px;
+      width: inherit;
+  
+      img {
+        max-width: 800px;
+        width: 100%;
+        min-width: 240px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        &.mobile-img {
+          max-width: 400px;
+        }
+      }
+    }
+    
+    .lead.collapse-title {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  
+  @include media-breakpoint-down(lg) {
+    padding: 80px 40px;
+
+    .title {
+      font-size: 24px;
+    }
+
+    #help-collapse {
+      .card .card-body {
+        padding: 1rem 20px !important;
+      }
+
+      .lead.collapse-title {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 80px 20px !important;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 80px 10px !important;
+
+    .breadcrumb.breadcrumb-slash {
+      margin-top: 1.5rem !important;
+      margin-bottom: 0 !important;
+
+      .breadcrumb-item {
+        font-size: 12px !important;
+      }
+    }
+
+    .help-title {
+      margin-bottom: 0 !important;
+      font-size: 18px !important;
+    }
+
+    #help-collapse {
+      .lead.collapse-title {
+        font-size: 14px !important;
+      }
+
+      p {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
+.collapse-icon [data-toggle=collapse]:after {
+  transform: rotate(-180deg);
+}
+
+.collapse-icon [aria-expanded=false]:after {
+  right: 1rem;
+  transform: rotate(0deg);
+}

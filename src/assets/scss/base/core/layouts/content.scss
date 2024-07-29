@@ -1,0 +1,41 @@
+// Core mixins
+@import '~@core/scss/base/bootstrap-extended/include';
+
+body {
+  min-width: 460px;
+  overflow: auto;
+}
+
+#app {
+  height: 100vh !important;
+
+  .app-content.content {
+    padding: 4rem 0 0 0 !important;
+    min-height: calc(100% - 288.4px);
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 0 0 0 !important;
+    }
+
+    &.home {
+      padding: 0rem 0rem 0rem 0rem !important;
+    }
+  
+    &.dashboard {
+      .content-wrapper {
+        max-width: 1200px;
+        width: 100%;
+      }
+      padding: 88px 120px 16px 120px !important;
+  
+      @media (max-width: 1120px) {
+        padding: 88px 16px 16px 16px !important;
+      }
+      @include media-breakpoint-up(sm) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+

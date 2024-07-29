@@ -1,0 +1,315 @@
+@import '~@core/scss/base/bootstrap-extended/_include.scss';
+
+#home {
+  h1 {
+    font-size: 36px;
+    line-height: 170%;
+  }
+  
+  .feature-card {
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  h2, .title {
+    font-size: 24px;
+    line-height: 150%;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  .p-section {
+    padding: 60px 80px;
+  }
+
+  .image-container {
+    margin-bottom: 80px;
+    width: inherit;
+  
+    img {
+      max-width: 800px;
+      width: 100%;
+      min-width: 240px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .bg-gradient {
+    background: linear-gradient(111.34deg, #73CCD4 0%, #3370A2 100%);
+  }
+
+  .bg-teal {
+    background-color: #56ABB50F;
+  }
+
+  .input-username {
+    .input-group {
+      width: 150%;
+  
+      .form-control {
+        font-size: 18px;
+        height: 52px;
+      }
+  
+      .input-group-append .btn {
+        .feather {
+          height: 28px;
+          width: 28px;
+        }
+        .spinner-border {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+  .right-card {
+    margin-top: 4rem;
+  }
+
+  .feature-background {
+    background-image: linear-gradient(to right, #73CCD4, #3370A2);
+    border-radius: 10px;
+  }
+
+  .img.feature {
+    max-width: 500px;
+  }
+
+  .aos-fade {
+    overflow-x: hidden;
+  }
+
+  .btn-more {
+    min-width: 25%;
+    margin-top: 5rem;
+  }
+
+  .btn-more:hover {
+    background-color: $primary;
+    color: white;
+  }
+
+  @include media-breakpoint-down(lg) {
+    h1, h2, h4.card-title a {
+      font-size: 24px;
+    }
+
+    .p-section {
+      padding: 20px 40px !important;
+    }
+
+    #home-user-analytics {
+      h1, h2 {
+        text-align: center !important;
+        margin: 0 auto !important;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+    }
+
+    #home-benefits .mb-5 {
+      margin-bottom: 1rem !important;
+    }
+
+    #home-features {
+      h1, .title, .subtitle {
+        text-align: center;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .subtitle, a {
+      font-size: 16px;
+    }
+
+    .box-content {
+      order: 2;
+      margin-bottom: 4.5rem;
+    }
+
+    .box-header {
+      order: 1;
+    }
+
+    .input-username {
+      display: block;
+
+      .input-group {
+        margin: 0 auto;
+        max-width: 400px;
+  
+        .form-control {
+          font-size: 14px;
+          height: 42px;
+        }
+        
+        .input-group-append .btn {
+          .feather {
+            height: 18px;
+            width: 18px;
+          }
+
+          .spinner-border {
+            height: 1rem;
+            width: 1rem;
+          }
+        }
+      }
+    }
+
+    .right-card {
+      margin-top: 0;
+    }
+
+    .feature-background {
+      margin: 0rem;
+    }
+
+    .img.feature {
+      max-width: 250px;
+    }
+
+    .btn-more {
+      font-size: 14px;
+      line-height: 1rem;
+    }
+
+    .blog-list-wrapper {
+      margin-bottom: 0 !important;
+      
+      .card {
+        display: block;
+        margin: 0 auto 2.5rem auto;
+        max-width: 400px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    #home-user-analytics {
+      h1 {
+        font-size: 24px;
+      }
+      
+      h2 {
+        font-size: 16px;
+      }
+    }
+
+    .box-content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .btn-more {
+      margin-top: 0 !important;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .input-group {
+      max-width: 300px !important;
+
+      .form-control {
+        font-size: 12px !important;
+        height: 36px !important;
+      }
+
+      .input-group-append .btn {
+        .feather {
+          height: 12px !important;
+          width: 12px !important;
+        }
+
+        .spinner-border {
+          height: 1rem !important;
+          width: 1rem !important;
+        }
+      }
+    }
+  }
+  
+  @include media-breakpoint-only(xs) {
+    h1, h2, h4.card-title a {
+      font-size: 18px !important;
+    }
+
+    #home-user-analytics {
+      h1 {
+        font-size: 20px !important;
+      }
+
+      h2 {
+        font-size: 14px !important;
+      }
+    }
+
+    .title, .subtitle, a {
+      font-size: 14px !important;
+    }
+
+    .title.feature {
+      font-size: 18px !important;
+    }
+
+    .swal-width {
+      font-size: 10px !important;
+      width: 200px !important;
+    }
+  }
+}
+
+// Color palettes
+@import '~@core/scss/base/core/colors/palette-variables.scss';
+
+.Vue-Toastification__toast {
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type== 'base' {
+        &.toast-#{$color_name} {
+          background-color: $color_value;
+        }
+      }
+    }
+  }
+
+  width: 450px;
+
+  .Vue-Toastification__toast-component-body .toastification {
+    > div {
+      .b-avatar {
+        display: none;
+      }
+      > div {
+        display: block !important;
+        text-align: center;
+      }
+    }
+  
+    .text-body {
+      color: white !important;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.Vue-Toastification__container.top-center {
+  align-items: center;
+  top: 70px;
+}
